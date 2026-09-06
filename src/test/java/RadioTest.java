@@ -3,19 +3,21 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
+    // --- ТЕСТЫ ДЛЯ ОБНОВЛЕННЫХ РАДИОСТАНЦИЙ ---
+
     @Test
     public void shouldInitDefaultRadio() {
-        Radio radio = new Radio(); // По умолчанию
+        Radio radio = new Radio();
         radio.setCurrentStation(9);
-        radio.next(); //
+        radio.next();
         Assertions.assertEquals(0, radio.getCurrentStation());
     }
 
     @Test
     public void shouldInitCustomRadio() {
-        Radio radio = new Radio(30);
+        Radio radio = new Radio(30); // Передаем количество станций
         radio.setCurrentStation(29);
-        radio.next(); //
+        radio.next();
         Assertions.assertEquals(0, radio.getCurrentStation());
     }
 
@@ -33,6 +35,8 @@ public class RadioTest {
         radio.prev();
         Assertions.assertEquals(29, radio.getCurrentStation());
     }
+
+    // --- СТАНДАРТНЫЕ ТЕСТЫ ДЛЯ СТАНЦИЙ ---
 
     @Test
     public void shouldSetStationWithinRange() {
@@ -63,6 +67,8 @@ public class RadioTest {
         radio.prev();
         Assertions.assertEquals(4, radio.getCurrentStation());
     }
+
+    // --- ТЕСТЫ ДЛЯ ГРОМКОСТИ ---
 
     @Test
     public void shouldIncreaseVolume() {
