@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
-    // --- ТЕСТЫ ДЛЯ ОБНОВЛЕННЫХ РАДИОСТАНЦИЙ ---
 
     @Test
     public void shouldInitDefaultRadio() {
@@ -36,7 +35,6 @@ public class RadioTest {
         Assertions.assertEquals(29, radio.getCurrentStation());
     }
 
-    // --- СТАНДАРТНЫЕ ТЕСТЫ ДЛЯ СТАНЦИЙ ---
 
     @Test
     public void shouldSetStationWithinRange() {
@@ -68,7 +66,6 @@ public class RadioTest {
         Assertions.assertEquals(4, radio.getCurrentStation());
     }
 
-    // --- ТЕСТЫ ДЛЯ ГРОМКОСТИ ---
 
     @Test
     public void shouldIncreaseVolume() {
